@@ -322,6 +322,11 @@
   white-space: nowrap;
   font-size: 0.6875rem;
   padding: 0 8px;
+  /* The shared .badge rule carries margin-bottom:16px, which would grow this row
+     from 32px to 48px on the cards that have a bonus and knock every row below it
+     out of line with the bonus-less cards. Reset it so all four rows stay 32px. */
+  margin: 0;
+  min-height: 32px;
 }
 
 .pack-what {
