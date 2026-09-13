@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://raffieeey.github.io/genvid-website/sitemap.xml
