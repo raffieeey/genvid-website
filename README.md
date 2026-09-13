@@ -20,7 +20,7 @@ This repository is the marketing site: static HTML and CSS, no frameworks, no bu
   - SEO: canonical, Open Graph, Twitter cards and JSON-LD on every page head
   - `favicon.png`
   - `logo.jpg`
-  - `og-image.jpg`
+  - `og-card.jpg`
   - `css/styles.css` - shared shell
   - `css/pages.css` - extra page rules when present
   - `clips/<slug>.mp4` - sample videos

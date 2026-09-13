@@ -13,7 +13,7 @@ There is no build step. Pages are plain HTML. CSS is plain and hand-editable.
 - `404.html` - not-found page
 - `robots.txt` and `sitemap.xml` - crawler files
 - Every page head carries canonical, Open Graph, Twitter card and JSON-LD structured data
-- `favicon.png`, `logo.jpg`, `og-image.jpg` - brand and social preview
+- `favicon.png`, `logo.jpg`, `og-card.jpg` - brand and social preview
 - `css/styles.css` - shared shell and type
 - `css/pages.css` - extra page rules when present
 - `clips/` - playable `.mp4` samples
