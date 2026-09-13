@@ -331,11 +331,22 @@
 
 .pack-what {
   margin: 0;
-  flex: 1 1 auto;
+  /* All four descriptions occupy the same box so the rows below them start at the
+     same top edge. Measured: three cards wrap to 4 lines (119px) while the Trio
+     description wraps to 5 (136px) at 17px font, which pushed its "best for" line
+     17px lower than the rest. 8em = 136px at the 17px body size, and scales with
+     the font so it stays correct at other sizes. */
+  min-height: 8em;
+  flex: 0 0 auto;
 }
 
 .pack-best {
-  min-height: 2.4em;
+  margin: 0;
+  /* Two reserved lines at the muted caption size. Measured on the single-column
+     mobile layout: the Studio copy wraps to 2 lines (38px) while the other three
+     stay at 1 (29px), which made one card 9px taller than its siblings. */
+  min-height: 3.2em;
+  flex: 1 1 auto;
 }
 
 .pack-card .btn {
