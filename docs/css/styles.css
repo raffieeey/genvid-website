@@ -331,6 +331,15 @@ p:last-child {
     0 18px 40px -24px rgba(34, 211, 238, 0.35);
 }
 
+/* Reserve two lines for card titles so rows below stay aligned across a grid. */
+.card > .h3,
+.card > h3,
+.card .clip-body > .h3,
+.card .clip-body > h3 {
+  min-height: 2.4em;
+  min-height: 2lh;
+}
+
 .skip-link {
   position: absolute;
   left: 16px;
