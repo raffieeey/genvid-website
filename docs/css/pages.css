@@ -306,6 +306,12 @@
 }
 
 /* Pack cards: fixed row sequence so every row lines up across the four cards. */
+
+/* Each text row reserves exactly the space it needs so the rows below never move.
+   The reservation is computed from the longest copy in the set, not a blanket
+   min-height, because a blanket value leaves dead space on the shorter cards.
+   Measured on the desktop grid at 1440px: credits 1 line, badge row 32px,
+   description max 5 lines (136px), best-for max 2 lines (38px). */
 .pack-card .stack {
   flex: 1 1 auto;
 }
@@ -331,21 +337,23 @@
 
 .pack-what {
   margin: 0;
-  /* All four descriptions occupy the same box so the rows below them start at the
-     same top edge. Measured: three cards wrap to 4 lines (119px) while the Trio
-     description wraps to 5 (136px) at 17px font, which pushed its "best for" line
-     17px lower than the rest. 8em = 136px at the 17px body size, and scales with
-     the font so it stays correct at other sizes. */
-  min-height: 8em;
+  /* The four descriptions are written to similar lengths so they wrap to the same
+     number of lines at every breakpoint. This reserves three lines, the most any
+     of them needs on the 4-column grid, so the rows below start at the same top
+     edge everywhere without leaving dead space. If the copy is edited, keep the
+     four lines within about ten characters of each other. */
+  min-height: 3.6em;
   flex: 0 0 auto;
 }
 
 .pack-best {
   margin: 0;
-  /* Two reserved lines at the muted caption size. Measured on the single-column
-     mobile layout: the Studio copy wraps to 2 lines (38px) while the other three
-     stay at 1 (29px), which made one card 9px taller than its siblings. */
-  min-height: 3.2em;
+  /* Two reserved lines at the muted caption size. Measured at 320px wide: the
+     longest "best for" line wraps to 2 lines (38px) while the others stay at 1
+     (29px), which made one card 10px taller and pushed its button out of line.
+     Two reserved lines keeps every card level; flex-grow absorbs any surplus so
+     the buttons stay bottom-anchored. */
+  min-height: 3.4em;
   flex: 1 1 auto;
 }
 

@@ -340,6 +340,23 @@ p:last-child {
   min-height: 2lh;
 }
 
+/* Sections targeted by in-page anchors must clear the sticky nav, otherwise the
+   first line or two of the section sits underneath the header after a jump.
+   The nav is 64px tall on mobile (brand row + link row) and 64px on desktop. */
+section[id],
+main > section,
+[id]:target {
+  scroll-margin-top: 80px;
+}
+
+@media (max-width: 719px) {
+  section[id],
+  main > section,
+  [id]:target {
+    scroll-margin-top: 112px;
+  }
+}
+
 .skip-link {
   position: absolute;
   left: 16px;
@@ -413,7 +430,7 @@ p:last-child {
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
-  gap: 0 4px;
+  gap: 0 2px;
   order: 3;
   width: 100%;
   min-width: 0;
@@ -436,7 +453,9 @@ p:last-child {
   align-items: center;
   flex: 0 0 auto;
   min-height: 44px;
-  padding: 8px 10px;
+  /* 8px side padding keeps all four labels inside a 342px row at 390px wide.
+     Measured: at 10px the row needs 363px and clipped the last label. */
+  padding: 8px 8px;
   color: var(--muted);
   text-decoration: none;
   font-size: 0.9375rem;
@@ -447,10 +466,68 @@ p:last-child {
   color: var(--text);
 }
 
+/* Narrow phones: shrink the header controls in steps so the four nav labels and
+   the call to action all fit without horizontal scrolling. Measured overflows with
+   the desktop padding: 29px at 360px wide and 69px at 320px wide. */
 @media (max-width: 399px) {
   .nav-cta {
     padding-left: 14px;
     padding-right: 14px;
+  }
+}
+
+@media (max-width: 379px) {
+  .nav-links {
+    gap: 0 1px;
+  }
+
+  .nav-links a {
+    padding: 8px 6px;
+    font-size: 0.875rem;
+  }
+
+  .nav-cta {
+    padding-left: 11px;
+    padding-right: 11px;
+    font-size: 0.8125rem;
+  }
+
+  .nav-brand {
+    gap: 7px;
+    font-size: 0.9375rem;
+  }
+
+  .nav-brand img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* 320px class devices need one more step down so the row still fits. */
+@media (max-width: 339px) {
+  .nav-links {
+    gap: 0;
+  }
+
+  .nav-links a {
+    padding: 8px 4px;
+    font-size: 0.8125rem;
+  }
+
+  .nav-cta {
+    padding-left: 9px;
+    padding-right: 9px;
+    font-size: 0.75rem;
+  }
+
+  .nav-brand {
+    gap: 5px;
+    font-size: 0.875rem;
+  }
+
+  .nav-brand img {
+    width: 26px;
+    height: 26px;
   }
 }
 
