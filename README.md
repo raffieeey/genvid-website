@@ -17,6 +17,7 @@ This repository is the marketing site: static HTML and CSS, no frameworks, no bu
   - `404.html` - not found
   - `robots.txt`
   - `sitemap.xml`
+  - SEO: canonical, Open Graph, Twitter cards and JSON-LD on every page head
   - `favicon.png`
   - `logo.jpg`
   - `og-image.jpg`
