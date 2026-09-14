@@ -1,6 +1,6 @@
 # docs/
 
-This folder is the published GENVID site. GitHub Pages serves it from `/docs` at [https://raffieeey.github.io/genvid-website/](https://raffieeey.github.io/genvid-website/).
+This folder is the published GENVID site. GitHub Pages serves it from `/docs` at [https://genvid.qrasf.com/](https://genvid.qrasf.com/).
 
 There is no build step. Pages are plain HTML. CSS is plain and hand-editable.
 

@@ -4,7 +4,7 @@ GENVID is a Malaysian AI-video service. Tagline: Ideas into video.
 
 It turns a plain text idea, or one product photo, into a short AI video. Customers order through the Telegram bot [t.me/ZhongZena_bot](https://t.me/ZhongZena_bot).
 
-This repository is the marketing site: static HTML and CSS, no frameworks, no build step, no JavaScript libraries. GitHub Pages publishes the `/docs` folder to [https://raffieeey.github.io/genvid-website/](https://raffieeey.github.io/genvid-website/).
+This repository is the marketing site: static HTML and CSS, no frameworks, no build step, no JavaScript libraries. GitHub Pages publishes the `/docs` folder to [https://genvid.qrasf.com/](https://genvid.qrasf.com/).
 
 ## File map
 
