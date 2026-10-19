@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://genvid.antisyc.dev/sitemap.xml
+Sitemap: https://www.genvidmy.workers.dev/sitemap.xml
